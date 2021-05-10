@@ -11,8 +11,10 @@ def start_bot(update: Updater, context:CallbackContext):
 	print(update)
 	mytext = """Привет {}
 
-	Я немного туповатый бот и мой создатель который почти нихуя не знает этот язык не смог сделать меня лучше, 
-	но я один хуй работаю =)""".format(update.message.chat.first_name)
+	Я немного туповатый бот! Я создан, чтобы зеркалить! Когда тебе одиноко отправь мне сердечко =)
+	(P.S Если создатель решит, что меня пора обновить или заменить, я не обижусь, я тебя очень люблю!)
+	""".format(update.message.chat.first_name)
+	logging.info('User {} press /start'.format(update.message.chat.username))
 	update.message.reply_text(mytext)
 
 
